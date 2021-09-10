@@ -1,3 +1,4 @@
+
 ### welcome_assignment_answers
 ### Input - All eight questions given in the assignment.
 ### Output - The right answer for the specific question.
@@ -8,7 +9,7 @@ def welcome_assignment_answers(question):
     if question == "Are encoding and encryption the same? - Yes/No":
         answer = str("No")
     elif question == "Is it possible to decrypt a message without a key? - Yes/No":
-        answer = str("Yes")
+        answer = str("No")
     elif question == "Is it possible to decode a message without a key? - Yes/No":
         answer = str("Yes")
     elif question == "Is a hashed message supposed to be un-hashed? - Yes/No":
@@ -24,7 +25,6 @@ def welcome_assignment_answers(question):
     elif question == "What layer of the TCP/IP model the protocol TCP belongs to? - The answer should be a numeric " \
                      "number":
         answer = int("4")
-        
     return (answer)
 
 # Complete all the questions.
