@@ -1,13 +1,10 @@
 ### welcome_assignment_answers
 ### Input - All eight questions given in the assignment.
 ### Output - The right answer for the specific question.
-answer = ''
-
 
 def welcome_assignment_answers(question):
     # The student doesn't have to follow the skeleton for this assignment.
     # Another way to implement is using a "case" statements similar to C.
-    global answer
     if question == "Are encoding and encryption the same? - Yes/No":
         answer = str("No")
     elif question == "Is it possible to decrypt a message without a key? - Yes/No":
