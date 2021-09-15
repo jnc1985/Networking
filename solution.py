@@ -25,7 +25,7 @@ def webServer(port=13331):
 
                 # Send one HTTP header line into socket.
                 # Fill in start
-                connectionSocket.send(str.encode("HTTP/1.1 200 OK\r\n\r\n"))  # Send a response header to the client. Without the str.encode, it will pass as a binary
+                connectionSocket.send(bytes("HTTP/1.1 200 OK\r\n\r\n", "UTF-8"))  # Send a response header to the client. Without the bytes - UTF-8, it will pass as a binary
                 # Fill in end
 
                 # Send the content of the requested file to the client
@@ -37,8 +37,8 @@ def webServer(port=13331):
             except IOError:
                 # Send response message for file not found (404)
                 # Fill in start
-                connectionSocket.send(str.encode("HTTP/1.1 404 Not Found\r\n\r\n")) # Send a response header to the client
-                connectionSocket.send(str.encode("<html><head></head><body><h1>Sorry, this page was lost to the void!</h1></body></html>\r\n\r\n"))  # Send a custom responses page to the client
+                connectionSocket.send(bytes("HTTP/1.1 404 Not Found\r\n\r\n", "UTF-8")) # Send a response header to the client
+                connectionSocket.send(bytes("<html><head></head><body><h1>Sorry, this page was lost to the void!</h1></body></html>\r\n\r\n", "UTF-8"))  # Send a custom response page to the client
                 # Fill in end
 
                 # Close client socket
