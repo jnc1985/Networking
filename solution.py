@@ -2,7 +2,7 @@ from socket import *
 
 
 def smtp_client(port=1025, mailserver='127.0.0.1'):
-    msg = "\r\n Hello From NYU! - QUIT"
+    msg = "\r\n Hello From NYU!"
     endmsg = "\r\n.\r\n"
 
     # Choose a mail server (e.g. Google mail server) if you want to verify the script beyond GradeScope
@@ -68,6 +68,7 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
     # Message ends with a single period.
     # Fill in start
     clientSocket.send(bytes(endmsg, "UTF-8"))
+    clientSocket.recv(1024)
     # Fill in end
 
     # Send QUIT command and get server response.
