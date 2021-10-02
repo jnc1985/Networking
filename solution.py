@@ -73,8 +73,8 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
     # Send QUIT command and get server response.
     # Fill in start
     #print('Quiting Connection...')
-    endCommand = "QUIT\r\n"
-    clientSocket.send(endCommand.encode())
+    end = "QUIT\r\n"
+    clientSocket.send(end.encode())
     recv5 = clientSocket.recv(1024).decode()
     #print(recv5)
     #if recv5[:3] != '221':  # 221 Closing channel ack
