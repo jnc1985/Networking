@@ -11,7 +11,7 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
 
     # Fill in start
     clientSocket = socket(AF_INET, SOCK_STREAM)
-    clientSocket.connect((mailserver, 25))
+    clientSocket.connect((mailserver, 1025))
     # Fill in end
 
     recv = clientSocket.recv(1024).decode()
@@ -29,38 +29,35 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
 
     # Send MAIL FROM command and print server response.
     # Fill in start
-    print ('Sending E-mail...')
+    #print ('Sending E-mail...')
     mailpackage = "MAIL From: jnc5@nyu.edu\r\n"
     clientSocket.send(mailpackage.encode())
     recv1 = clientSocket.recv(1024).decode()
-    print (recv1)
+    #print (recv1)
     if recv1[:3] != '250':
-        print
-        '250 reply not received from server.'
+        #print ('250 reply not received from server.')
     # Fill in end
 
     # Send RCPT TO command and print server response.
     # Fill in start
-    print ('Sending RCPT TO...')
+    #print ('Sending RCPT TO...')
     envelope = "RCPT TO: jnc5@nyu.edu\r\n"
     clientSocket.send(envelope.encode())
     recv1 = clientSocket.recv(1024).decode()
-    print (recv1)
+    #print (recv1)
     if recv1[:3] != '250':
-        print
-        '250 reply not received from server.'
+        #print ('250 reply not received from server.')
     # Fill in end
 
     # Send DATA command and print server response.
     # Fill in start
-    print ('Sending Data...')
+    #print ('Sending Data...')
     sendData = "DATA\r\n"
     clientSocket.send(sendData.encode())
     recv1 = clientSocket.recv(1024).decode()
-    print (recv1)
+    #print (recv1)
     if recv1[:3] != '354': #354 Start mail input
-        print
-        '354 reply not received from server.'
+        #print ('354 reply not received from server.')
     # Fill in end
 
     # Send message data.
@@ -79,10 +76,9 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
     quit = "QUIT\r\n"
     clientSocket.send(quit.encode())
     recv1 = clientSocket.recv(1024).decode()
-    print (recv1)
+    #print (recv1)
     if recv1[:3] != '221': #221 Closing channel ack
-        print
-        '221 reply not received from server.'
+        #print ('221 reply not received from server.')
     # Fill in end
 
 
