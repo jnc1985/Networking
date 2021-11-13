@@ -122,12 +122,17 @@ def ping(host, timeout=1):
         time.sleep(1) # Send ping requests to a server separated by approximately one second
         timetolive.append(delay)
     # Calculate vars values and return them
+    stdev = []
     packet_min = (min(timetolive)) * 1000
     packet_max = (max(timetolive)) * 1000
     packet_avg = ((sum(timetolive)) / 4) * 1000
     stdev_var = (statistics.stdev(timetolive)) * 1000
+    vars = [str(round(packet_min, 2)), str(round(packet_avg, 2)), str(round(packet_max, 2)),str(round(stdev_var, 2))]
+
     print("('" + str(round(packet_min, 2)) + "','" + str(round(packet_max, 2)) + "','" + str(round(packet_avg, 2)) + "','" + str(round(stdev_var, 2)) + "')")
+
     return vars
+
 
 if __name__ == '__main__':
     ping("google.com")
