@@ -138,7 +138,7 @@ def get_route(hostname):
                     # Fill in start
                     # You should add your responses to your lists here
                     tracelist1 = [ttl, rtt, addr[0], hname]
-                    tracelist2.append(tracelist1)
+                    tracelist2.append(str(tracelist1))
                     #print(tracelist1)
                     # Fill in end
                 elif types == 3:
@@ -147,7 +147,7 @@ def get_route(hostname):
                     # Fill in start
                     # You should add your responses to your lists here
                     tracelist1 = [ttl, rtt, addr[0], hname]
-                    tracelist2.append(tracelist1)
+                    tracelist2.append(str(tracelist1))
                     #print(tracelist1)
                     # Fill in end
                 elif types == 0:
@@ -156,7 +156,7 @@ def get_route(hostname):
                     # Fill in start
                     # You should add your responses to your lists here and return your list if your destination IP is met
                     tracelist1 = [ttl, rtt, addr[0], hname]
-                    tracelist2.append(tracelist1)
+                    tracelist2.append(str(tracelist1))
                     #print(tracelist1)
                     return tracelist2
                     # Fill in end
