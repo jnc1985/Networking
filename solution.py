@@ -137,6 +137,7 @@ def get_route(hostname):
                     # You should add your responses to your lists here
                     tracelist1 = [ttl, rtt, addr[0], hname]
                     tracelist2.append(tracelist1)
+                    print(tracelist1)
                     print(tracelist2)
                     # Fill in end
                 elif types == 3:
@@ -146,6 +147,7 @@ def get_route(hostname):
                     # You should add your responses to your lists here
                     tracelist1 = [ttl, rtt, addr[0], hname]
                     tracelist2.append(tracelist1)
+                    print(tracelist1)
                     print(tracelist2)
                     # Fill in end
                 elif types == 0:
@@ -155,6 +157,7 @@ def get_route(hostname):
                     # You should add your responses to your lists here and return your list if your destination IP is met
                     tracelist1 = [ttl, rtt, addr[0], hname]
                     tracelist2.append(tracelist1)
+                    print(tracelist1)
                     print(tracelist2)
                     # Fill in end
                 else:
@@ -163,6 +166,7 @@ def get_route(hostname):
                     trace_msg = print("error")
                     tracelist1 = [trace_msg]
                     tracelist2.append(tracelist1)
+                    print(tracelist1)
                     print(tracelist2)
                     # Fill in end
                 break
@@ -170,5 +174,5 @@ def get_route(hostname):
                 mySocket.close()
 
 
-#if __name__ == '__main__':
-    #get_route("google.com")
+if __name__ == '__main__':
+    get_route("google.com")
