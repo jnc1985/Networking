@@ -140,7 +140,6 @@ def get_route(hostname):
                     tracelist1 = [ttl, rtt, addr[0], hname]
                     tracelist2.append(tracelist1)
                     print(tracelist1)
-                    print(tracelist2)
                     # Fill in end
                 elif types == 3:
                     bytes = struct.calcsize("d")
@@ -150,7 +149,6 @@ def get_route(hostname):
                     tracelist1 = [ttl, rtt, addr[0], hname]
                     tracelist2.append(tracelist1)
                     print(tracelist1)
-                    print(tracelist2)
                     # Fill in end
                 elif types == 0:
                     bytes = struct.calcsize("d")
@@ -160,7 +158,6 @@ def get_route(hostname):
                     tracelist1 = [ttl, rtt, addr[0], hname]
                     tracelist2.append(tracelist1)
                     print(tracelist1)
-                    print(tracelist2)
                     return tracelist2
                     # Fill in end
                 else:
@@ -170,8 +167,6 @@ def get_route(hostname):
                     tracelist1 = [trace_msg]
                     tracelist2.append(tracelist1)
                     print(tracelist1)
-                    print(tracelist2)
-                    return tracelist2
                     # Fill in end
                 break
             finally:
