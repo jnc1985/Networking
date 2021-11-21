@@ -1,3 +1,4 @@
+
 from socket import *
 import os
 import sys
@@ -167,6 +168,4 @@ def get_route(hostname):
                 break
             finally:
                 mySocket.close()
-    #print(tracelist2)
-    return(tracelist2)
-#get_route("www.google.com")
+    return(tracelist2)   
