@@ -169,4 +169,4 @@ def get_route(hostname):
                 mySocket.close()
     print(tracelist2)
     return(str(tracelist2))
-get_route("www.google.com")
+#get_route("www.google.com")
